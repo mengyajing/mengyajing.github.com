@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员注册 - 途牛旅游网</title>
+    <meta name="description" content="途牛旅游网：中国最大的旅游行业在线电子商务网站，为您提供最为周到的旅游服务。途牛旅游网" />
+    <meta name="keywords" content="会员注册" />
+    <link rel="stylesheet" href="css/register.css"/>
+</head>
+<body id="index1200" class="index1200">
+<!-- 头部开始 -->
+<div class="head_bg">
+    <div class="header">
+        <div class="logo clearfix">
+            <div class="logocon">
+                <a href="#">
+                    <img alt="途牛旅游网" title="途牛旅游网" src="images/logv2.png"/>
+                </a>
+            </div>
+            <p class="head_tip">欢迎注册</p>
+        </div>
+    </div>
+</div>
+<!-- 头部结束 -->
+<!-- 注册版块开始 -->
+<div class="allWrap">
+    <div class="main_top clearfix">
+        <div class="main_top_l">
+					<span class="decoration">
+					</span>
+        </div>
+        <div class="main_top_r">
+            已有途牛账号了？
+            <a rel="nofollow" target="_self" href="#">
+                登录
+            </a>
+        </div>
+    </div>
+
+    <div id="user-reg" class="user-reg">
+        <div id="bg_div" class="bg_div" style="display:none;"></div>
+        <div id="reg-field">
+            <div class="a_title title_oneStep clearfix">
+                <a class="page_phone page_cur" href="javascript:void(0);" style="width:100%">
+                    <span>手机注册</span>
+                    <span class="poptip-arrow poptip-arrow-top">▼</span>
+                </a>
+            </div>
+            <div id="reg-wrap" class="reg-wrap">
+                <div id="mainPart" class="mainPart clearfix">
+                    <!--手机注册第一步开始-->
+                    <form method="post" id="registerFrm" autocomplete="off" onsubmit="return false;">
+                        <div class="main_item">
+                            <div class="step step1"></div>
+                            <ul class="input-list mainCon">
+                                <li>
+                                    <div class="input">
+                                        <label>手机号码：</label>
+                                        <div class="input_div_left">
+                                            <input class="J_zoneHid" type="hidden" name="zone" value="0086" />
+                                            <div class="zone_val J_zoneVal" data-country="中国" data-zone="0086">中国 0086</div>
+                                            <div class="zone_tri"></div>
+                                            <div class="zones J_Zones" style="display: none;">
+                                                <div class="zones_title">
+                                                    <ul class="ul_zones_title J_zonesTitle">
+                                                        <li class="li_active">HOT</li>
+                                                        <li>A</li>
+                                                        <li>B</li>
+                                                        <li>C</li>
+                                                        <li>D</li>
+                                                        <li>E</li>
+                                                        <li>F</li>
+                                                        <li>G</li>
+                                                        <li>H</li>
+                                                        <li>I</li>
+                                                        <li>J</li>
+                                                        <li>K</li>
+                                                        <li>L</li>
+                                                        <li>M</li>
+                                                        <li>N</li>
+                                                        <li>O</li>
+                                                        <li>P</li>
+                                                        <li>Q</li>
+                                                        <li>R</li>
+                                                        <li>S</li>
+                                                        <li>T</li>
+                                                        <li>U</li>
+                                                        <li>V</li>
+                                                        <li>W</li>
+                                                        <li>X</li>
+                                                        <li>Y</li>
+                                                        <li>Z</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input value='' type="text" tabindex="1" name="tel" id="tel" autocomplete="off" maxlength="11" style="ime-mode:disabled" class="txt-m " placeholder="请输入手机号码"/>
+                                    </div>
+                                    <div class="input-tip" id="tel-tip">
+                                        <div class="input-tip-inner">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 验证码 -->
+                                <li class="identify_box">
+                                    <div class="input">
+                                        <label>验证码：</label>
+                                    <span class="txt-m identify_con">
+                                        <input type="text" class="identify_code txt_grey" id="identify" name="identify" placeholder="不区分大小写" maxlength="4" tabindex="2"/>
+                                        <img width="81" height="25" style="cursor: pointer;" alt="如验证码无法辨别，点击即可刷新。" id="identify_img" src="1447825328.4607" onclick='this.src = "";this.src = "/ajax/captcha/v/" + (new Date().getTime() + Math.random());' />
+                                    </span>
+                                    </div>
+                                    <div class="input-tip wd350" id="codeTip1">
+                                        <div class="input-tip-inner">
+                                            <span id="code_err" class="hide"></span>
+                                        <span>
+                                            看不清，
+                                            <a class="green" href='javascript:void(0);' onclick='document.getElementById("identify_img").src = "";document.getElementById("identify_img").src = "/ajax/captcha/v/" + (new Date().getTime() + Math.random());'>换一张</a>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="verify-box2_2">
+                                    <div class="input">
+                                        <label>校验码：</label>
+                                        <input type="text" class="txt-m txt_grey" id="code" placeholder="请输入校验码" disabled="disabled" name="code" maxlength="6" tabindex="3"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="input" style="padding-left:75px; color:#333;">
+                                        我有“
+                                        <a target="_blank" href="#" style="border-bottom: 1px dashed #43b313;">牛拉牛</a>
+                                        ”活动
+                                        <a href="javascript:void(0);" id="shuru" class="shuru clickBtn">
+                                            点击输入邀请码
+                                        <span class="triangle_left"> <em>◆</em> <i>◆</i>
+                                        </span>
+
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="reg-check">
+                                        <input type="checkbox" id="travel-info" checked="checked" />
+                                        <label for="travel-info">
+                                            同意
+                                            <a class="agreement" href="javascript:void(0)">途牛会员协议</a>
+                                            并且愿意接受旅游咨询免费信息
+                                        </label>
+                                        <br />
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="reg-check">
+                                <input type="submit" value="下一步" tabindex="9" class="login_btn login_btn_gray register_btn" name="info_submit"  id="info_submit" disabled="disabled"/>
+                            </div>
+                        </div>
+                    <!--手机注册第一步结束-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--注册版块结束-->
+</body>
+</html>

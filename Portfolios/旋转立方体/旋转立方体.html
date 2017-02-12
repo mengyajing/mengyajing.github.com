@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" style="background: linear-gradient(white 0%, black 100%);height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转立方体</title>
+    <style>
+        /* 步骤 */
+        /* 01 先有一个立方体，当立方体正对着我们的视线的时候 最容易绘制，此时不仅角度容易计算，而且显示在眼前的 只有一个面。*/
+        /* 通用设置 */
+        /*body{*/
+            /*perspective: 1000px;*/
+        /*}*/
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            text-shadow: 0 0 10px green;
+        }
+        /*顶部*/
+        .cube div:nth-child(1){
+            background: red;
+            transform-origin: top;
+            transform: rotateX(90deg);
+        }
+        /*底部*/
+        div:nth-child(2){
+            background-color: orange;
+            transform-origin: bottom;
+            transform: rotateX(270deg);
+        }
+        /*左边*/
+        div:nth-child(3){
+            background-color: yellow;
+            transform-origin: left;
+            transform: rotateY(270deg);
+        }
+        /*右边*/
+        div:nth-child(4){
+            background-color: green;
+            transform-origin: right;
+            transform: rotateY(90deg);
+        }
+        /*前面*/
+        div:nth-child(5){
+            background-color: blue;
+            transform: translateZ(200px);
+        }
+        /*后面*/
+        div:nth-child(6){
+            background-color: purple;
+            transform: rotateY(180deg);
+        }
+        /*02 立方体准备完毕，开始旋转展示*/
+        .cube {
+            transform-style: preserve-3d;
+            /*transition: transform 10s;*/
+            animation: demo 20s infinite linear;
+        }
+        @keyframes demo {
+            100%{transform: rotate3D(1,1,1,2000deg)}
+        }
+        /*.cube:hover {*/
+
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="cube">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #clock{
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            background: url("clock.jpg");
+            position: relative;
+        }
+        #hour{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url("hour.png") no-repeat center;
+        }
+        #minute{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url("minute.png") no-repeat center;
+        }
+        #second{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url("second.png") no-repeat center;
+        }
+    </style>
+</head>
+<body>
+<div id="clock">
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+</div>
+</body>
+</html>
+<script>
+    var clock = document.getElementById("clock");
+    var h = 0;
+    var m = 0;
+    var s = 0;
+    setInterval(function(){
+        var date = new Date();
+        ms = date.getMilliseconds();
+        h = date.getHours() + m/60;
+        m = date.getMinutes() + s/60;
+        s = date.getSeconds() + ms/1000;
+
+        clock.children[2].style.webkitTransform = "rotate(" + 6*s + "deg)";
+        clock.children[1].style.webkitTransform = "rotate(" + 6*m + "deg)";
+        clock.children[0].style.webkitTransform = "rotate(" + 30*h + "deg)";
+    },10);
+//    rotate 旋转、转动    Transform 转换、转化
+</script>
