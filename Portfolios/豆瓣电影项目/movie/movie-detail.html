@@ -2,7 +2,6 @@
     <div class="jumbotron">
         <div class="media">
             <div class="media-left">
-                <!-- <img class="media-object img-thumbnail img-responsive" ng-src="{{ movie.images.large }}"/> -->
                 <img class="media-object img-thumbnail img-responsive" src="{{movie.images.large}}"/>
             </div>
             <div class="media-body">
@@ -10,7 +9,7 @@
                 <table class="table" style="font-size: 20px;">
                     <tr>
                         <td>
-                            <b>导演：</b>
+                            <b>瀵兼紨锛�</b>
                            <span ng-repeat="director in movie.directors">
                                     <span class="label label-success">
                                     {{director.name}}
@@ -21,7 +20,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <b>类型：</b>
+                            <b>绫诲瀷锛�</b>
                             <span ng-repeat="name in movie.genres">
 								<span class="label label-success">
                                     {{name}}
@@ -32,7 +31,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <b>上映时间：</b>
+                            <b>涓婃槧鏃堕棿锛�</b>
 							<span class="label label-success" ng-bind="movie.year">
 							</span>
                         </td>
@@ -40,11 +39,11 @@
                 </table>
             </div>
         </div>
-        <p>剧情：{{ movie.summary }}</p>
+        <p>鍓ф儏锛歿{ movie.summary }}</p>
     </div>
     <div>
         <h3>
-            评论列表
+            璇勮鍒楄〃
         </h3>
     </div>
 </div>
